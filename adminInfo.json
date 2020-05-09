@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "5e4462b26d9cc77056d2d949"
+  },
+  "user_name": "Alishan",
+  "user_email": "ahmed.alishan3@gmail.com",
+  "user_pswd": "$2a$05$WQy5j8ErBo8ZwY0LnP7wxurgYPn.UwvkE/MQYATLZ5lRLx3//AG2a",
+  "user_profilePic": "path/to/s3",
+  "user_phoneNo": [
+    "8656",
+    "5700"
+  ],
+  "user_address": "Gaur City 1"
+}]

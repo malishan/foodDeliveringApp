@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "5e4643f2999a1711f522d077"
+  },
+  "name": "Rahul",
+  "email": "rkumar@gmail.com",
+  "pswd": "$2a$05$QzH7a0cdMGeohLYvHiaPguK.s3T0FpCKnqkypqiUwOfXoiTMZ670i",
+  "profilePic": "",
+  "phoneNo": [
+    "9875983501"
+  ],
+  "address": "NIT Uttarakhand"
+}]

@@ -1,0 +1,192 @@
+[{
+  "_id": "2",
+  "branch_id": "2",
+  "res_name": "Adyar Anand Bhawan",
+  "branch_name": "A2B BTM Layout",
+  "opentime": {
+    "$date": "2012-04-23T18:25:43.511Z"
+  },
+  "closetime": {
+    "$date": {
+      "$numberLong": "-62135596800000"
+    }
+  },
+  "status": "active",
+  "location": "Bangalore, India",
+  "contactNo": [
+    "9040695984",
+    "7986129618"
+  ],
+  "cusines": [
+    {
+      "cusine_name": "South Indian",
+      "cusine_items": [
+        {
+          "item_name": "Dosa",
+          "item_description": "a thin sheet like chapati made out of rice flour",
+          "item_price": 40,
+          "item_image": "",
+          "item_isAvailable": true,
+          "item_offer": 0
+        },
+        {
+          "item_name": "Veg Thali",
+          "item_description": "a complete mini meal including 2 chapatis, rice, daal and 2 seasonal vegetable",
+          "item_price": 90,
+          "item_image": "",
+          "item_isAvailable": true,
+          "item_offer": 0
+        }
+      ]
+    },
+    {
+      "cusine_name": "Arabian",
+      "cusine_items": [
+        {
+          "item_name": "Shawarma",
+          "item_description": "small pieces of roasted chicken wrapped in a paratha",
+          "item_price": 90,
+          "item_image": "",
+          "item_isAvailable": true,
+          "item_offer": 20
+        }
+      ]
+    },
+    {
+      "cusine_name": "Mughali",
+      "cusine_items": [
+        {
+          "item_name": "Chicken Tikka",
+          "item_description": "deep roasted chicken pieces",
+          "item_price": 270,
+          "item_image": "",
+          "item_isAvailable": true,
+          "item_offer": 0
+        }
+      ]
+    }
+  ]
+},{
+  "_id": "1",
+  "branch_id": "1",
+  "res_name": "Adyar Anand Bhawan",
+  "branch_name": "A2B Neeladri Nagar",
+  "opentime": {
+    "$date": "2012-04-23T18:25:43.511Z"
+  },
+  "closetime": {
+    "$date": {
+      "$numberLong": "-62135596800000"
+    }
+  },
+  "status": "active",
+  "location": "Bangalore, India",
+  "contactNo": [
+    "7060195984",
+    "8826129678"
+  ],
+  "cusines": [
+    {
+      "cusine_name": "North Indian",
+      "cusine_items": [
+        {
+          "item_name": "Chole Bature",
+          "item_description": "a fluffy chapati made from maze flour eaten with chole",
+          "item_price": 60,
+          "item_image": "",
+          "item_isAvailable": true,
+          "item_offer": 0
+        },
+        {
+          "item_name": "Veg Thali",
+          "item_description": "a complete mini meal including 2 chapatis, rice, daal and 2 seasonal vegetable",
+          "item_price": 90,
+          "item_image": "",
+          "item_isAvailable": true,
+          "item_offer": 0
+        }
+      ]
+    },
+    {
+      "cusine_name": "Arabian",
+      "cusine_items": [
+        {
+          "item_name": "Shawarma",
+          "item_description": "small pieces of roasted chicken wrapped in a paratha",
+          "item_price": 90,
+          "item_image": "",
+          "item_isAvailable": true,
+          "item_offer": 20
+        }
+      ]
+    },
+    {
+      "cusine_name": "Mughali",
+      "cusine_items": [
+        {
+          "item_name": "Chicken Tikka",
+          "item_description": "deep roasted chicken pieces",
+          "item_price": 270,
+          "item_image": "",
+          "item_isAvailable": true,
+          "item_offer": 10
+        }
+      ]
+    },
+    {
+      "cusine_name": "Fast Food",
+      "cusine_items": [
+        {
+          "item_name": "Burger",
+          "item_description": "veggy ingredients between two buns",
+          "item_price": 50,
+          "item_image": "",
+          "item_isAvailable": true,
+          "item_offer": 0
+        }
+      ]
+    }
+  ]
+},{
+  "_id": "3",
+  "branch_id": "1",
+  "res_name": "Barbeque Nation",
+  "branch_name": "JP Nagar",
+  "opentime": {
+    "$date": "2012-04-23T18:25:43.511Z"
+  },
+  "closetime": {
+    "$date": {
+      "$numberLong": "-62135596800000"
+    }
+  },
+  "status": "active",
+  "location": "Bangalore, India",
+  "contactNo": [
+    "6945695984",
+    "8906129618"
+  ],
+  "cusines": [
+    {
+      "cusine_name": "Mughali",
+      "cusine_items": [
+        {
+          "item_name": "Chicken Tikka",
+          "item_description": "deep roasted chicken pieces",
+          "item_price": 270,
+          "item_image": "",
+          "item_isAvailable": true,
+          "item_offer": 0
+        },
+        {
+          "item_name": "Biryani",
+          "item_description": "an arabian style pulao with roasted chicken",
+          "item_price": 350,
+          "item_image": "",
+          "item_isAvailable": true,
+          "item_offer": 0
+        }
+      ]
+    }
+  ]
+}]
