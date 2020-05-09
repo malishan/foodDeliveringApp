@@ -1,0 +1,1086 @@
+{
+	"info": {
+		"_postman_id": "7064587f-d04b-4016-b0e0-2000686d0696",
+		"name": "FoodApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "roleID",
+								"type": "text",
+								"value": "customer"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "loginFields",
+									"value": "{\n\t\"email\": \"rkumar@gmail.com\",\n       \"name\": \"Rahul\",\n\t\"pswd\": \"12345\"\n}",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "roleID",
+								"value": "customer",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "inputFields",
+									"value": "{ \n   \"name\":\"Rahul\",\n   \"email\":\"rkumar@gmail.com\",\n   \"pswd\":\"12345\",\n   \"phoneNo\":[ \n      \"9875983501\"\n   ],\n   \"address\":\"NIT Uttarakhand\"\n}",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/alishan/Downloads/G283744_ENF283744-P.jpg"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "roleID",
+								"value": "customer",
+								"type": "text"
+							},
+							{
+								"key": "userID",
+								"value": "5e4643f2999a1711f522d077",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update/phone-num",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "roleID",
+								"value": "customer",
+								"type": "text"
+							},
+							{
+								"key": "userID",
+								"value": "5e0c7911cd06de82cf83e3fd",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_phoneNo\": [\"7060195984\", \"9557550675\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/update/phone-num",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"update",
+								"phone-num"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update/address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "roleid",
+								"value": "customer",
+								"type": "text"
+							},
+							{
+								"key": "userid",
+								"value": "5e0c7911cd06de82cf83e3fd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_address\": \"H-301, Ajmera Stone Park, Bangalore\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/update/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"update",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update/password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "roleid",
+								"value": "customer",
+								"type": "text"
+							},
+							{
+								"key": "userid",
+								"value": "5e0c7911cd06de82cf83e3fd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_pswd\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/update/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"update",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update/profile-pic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "roleid",
+								"value": "customer",
+								"type": "text"
+							},
+							{
+								"key": "userid",
+								"value": "5e0c7911cd06de82cf83e3fd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_profilePic\": \"s3 url path\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/update/profile-pic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"update",
+								"profile-pic"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "roleID",
+								"value": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_pswd\": \"12345\",\n\t\"user_email\": \"ahmed.alishan3@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update/phone-num",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "roleID",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "userID",
+								"value": "5e0cf5510d32a3f5e2d45622",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_phoneNo\": [\"7060195984\", \"9557550675\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/update/phone-num",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"update",
+								"phone-num"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update/address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "roleid",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "userid",
+								"value": "5e0cf5510d32a3f5e2d45622",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_address\": \"H-301, Ajmera Stone Park, Bangalore\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/update/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"update",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update/password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "roleid",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "userid",
+								"value": "5e0cf5510d32a3f5e2d45622",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_pswd\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/update/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"update",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update/profile-pic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "roleid",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "userid",
+								"value": "5e0cf5510d32a3f5e2d45622",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_profilePic\": \"s3 url path\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/update/profile-pic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"update",
+								"profile-pic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "roleID",
+								"value": "customer",
+								"type": "text"
+							},
+							{
+								"key": "userID",
+								"value": "5dffabe9da8cd9cf43b63c09",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "restaurant",
+			"item": [
+				{
+					"name": "/addrestaurant",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "roleID",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "userID",
+								"value": "5e4462b26d9cc77056d2d949",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"res_name\": \"Barbeque Nation\",\n    \"branch_name\": \"JP Nagar\",\n    \"opentime\": \"2012-04-23T18:25:43.511Z\",\n    \"close\": \"2012-04-23T18:25:43.511Z\",\n    \"status\": \"active\",\n    \"location\": \"Bangalore, India\",\n    \"contactNo\": [\n        \"6945695984\",\n        \"8906129618\"\n    ],\n    \"cusines\": [\n        {\n            \"cusine_name\": \"Mughali\",\n            \"cusine_items\": [\n                {\n                    \"item_name\": \"Chicken Tikka\",\n                    \"item_description\": \"deep roasted chicken pieces\",\n                    \"item_price\": 270,\n                    \"item_image\": \"\",\n                    \"item_isAvailable\": true,\n                    \"item_offer\": 0\n                },\n                {\n                    \"item_name\": \"Biryani\",\n                    \"item_description\": \"an arabian style pulao with roasted chicken\",\n                    \"item_price\": 350,\n                    \"item_image\": \"\",\n                    \"item_isAvailable\": true,\n                    \"item_offer\": 0\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/addrestaurant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"addrestaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/updateRestaurant/name",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "restaurantID",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "branchID",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "userID",
+								"value": "5e4462b26d9cc77056d2d949",
+								"type": "text"
+							},
+							{
+								"key": "roleID",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"1\",\n    \"branch_id\": \"1\",\n    \"res_name\": \"Adyar Anand Bhawan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/updateRestaurant/name",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"updateRestaurant",
+								"name"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/deleteRestaurant",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "restaurantID",
+								"value": "3",
+								"type": "text"
+							},
+							{
+								"key": "branchID",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "userID",
+								"value": "5e4462b26d9cc77056d2d949",
+								"type": "text"
+							},
+							{
+								"key": "roleID",
+								"value": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8989/foodApp/deleteRestaurant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"deleteRestaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/getAllRestaurant",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "userID",
+								"value": "5e4462b26d9cc77056d2d949",
+								"type": "text"
+							},
+							{
+								"key": "roleID",
+								"value": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8989/foodApp/getAllRestaurant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"getAllRestaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/addCusine",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "roleID",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "branchID",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "restaurantID",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "userID",
+								"value": "5e4462b26d9cc77056d2d949",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cusine_name\": \"Fast Food\",\n    \"cusine_items\": [\n        {\n            \"item_name\": \"Burger\",\n            \"item_description\": \"veggy ingredients between two buns\",\n            \"item_price\": 50,\n            \"item_image\": \"\",\n            \"item_isAvailable\": true,\n            \"item_offer\": 0\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/addCusine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"addCusine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/updateCusine",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "restaurantID",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "branchID",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "userID",
+								"value": "5e4462b26d9cc77056d2d949",
+								"type": "text"
+							},
+							{
+								"key": "roleID",
+								"value": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cusine_name\": \"Mughali\",\n    \"cusine_items\": [\n        {\n            \"item_name\": \"Chicken Tikka\",\n            \"item_description\": \"deep roasted chicken pieces\",\n            \"item_price\": 270,\n            \"item_image\": \"\",\n            \"item_isAvailable\": true,\n            \"item_offer\": 10\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/foodApp/updateCusine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"updateCusine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/deleteCusine/Fast Food",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "restaurantID",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "branchID",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "userID",
+								"value": "5e4462b26d9cc77056d2d949",
+								"type": "text"
+							},
+							{
+								"key": "roleID",
+								"value": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8989/foodApp/deleteCusine/Fast Food",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"deleteCusine",
+								"Fast Food"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/getAllCusine",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "userID",
+								"value": "5e4462b26d9cc77056d2d949",
+								"type": "text"
+							},
+							{
+								"key": "roleID",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "restaurantID",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "branchID",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8989/foodApp/getAllCusine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"getAllCusine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/North Indian",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "restaurantID",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "branchID",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "userID",
+								"value": "5e4462b26d9cc77056d2d949",
+								"type": "text"
+							},
+							{
+								"key": "roleID",
+								"value": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8989/foodApp/foodPerCusine/North Indian",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"foodApp",
+								"foodPerCusine",
+								"North Indian"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8989/foodApp/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"foodApp",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
